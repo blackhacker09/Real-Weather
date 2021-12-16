@@ -1,8 +1,8 @@
-# Real-time-weather-website
+# Real-time-weather-web app ☀️ ☁️ ☔ ❄️ 🌁
 
 # Live Demo : https://still-lowlands-68502.herokuapp.com/
 
-* This web app displays the live weathersun_behind_large_cloud data of any place you want to know!star_struck.
+* This web app displays the live weather of any place you want to know!star_struck.
 
 * It is created by using Node.js and Express.js
 
