@@ -2,7 +2,7 @@
 
 # Live Demo : https://still-lowlands-68502.herokuapp.com/
 
-* This web app displays the live weather of any place you want to know!star_struck.
+* This web app displays the live weather of any place you want to know!
 
 * It is created by using Node.js and Express.js
 
