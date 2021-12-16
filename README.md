@@ -1,4 +1,4 @@
-# Real-time-weather-web app ☀️ ☁️ ☔ ❄️ 🌁
+# Real-time-weather-web-app ☀️ ☁️ ☔ ❄️ 🌁
 
 # Live Demo : https://still-lowlands-68502.herokuapp.com/
 
