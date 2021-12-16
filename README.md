@@ -4,7 +4,7 @@
 
 * This web app displays the live weather of any place you want to know!
 
-* It also displays current date,time and country from which searched city belongs.
+* It also displays current date, time and country from which searched city belongs.
 
 * It is created by using Node.js and Express.js
 
