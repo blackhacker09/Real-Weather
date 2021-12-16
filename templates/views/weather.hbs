@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    {{>headerlinks}}
+
+</head>
+
+<body>
+    {{>navbar}}
+
+    <!-- // main header  -->
+
+    <div class="container-fluid main_header">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <div class="temp_form">
+                    <form action="">
+                        <input type="text" id="cityName" placeholder="Enter Your City Name" autocomplete="off">
+                        <input class="search" type="submit" value="search" id="submitBtn">
+                    </form>
+
+                    <div class="tempInformation">
+                        <div class="top_layer">
+                            <p id="day">Monday</p>
+                            <p id="today_date">13 Dec</p>
+                        </div>
+
+                        <div class="main_layer data_hide">
+                            <p id="city_name">Get Output Here</p>
+                            <div class="middle_layer data_hide">
+                                <p id="temp"><span id="temp_real_val">0</span> <sup>o</sup>C</p>
+                                <p id="temp_status"><i class="fa fa-cloud" aria-hidden="true"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer section -->
+
+
+    {{>footer}}
+
+    <script src="/js/main.js"></script>
+
+    <script>
+
+        const getWeatherData = (location) => {
+            const API_KEY = "fc4bd71801296ad8e03f7e35b1e19ec7"
+            const URI = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}`
+
+            fetch(URI).then(res => res.json())
+                .then(obj => {
+                    let temp_dom = document.getElementById("temp_real_val")
+                    let city_name = document.getElementById("city_name")
+                    city_name.innerText = obj.name
+                    temp_dom.innerText = obj.main.temp
+                    console.log(obj.main.temp)
+
+                })
+                .catch(err => console.err(obj))
+        }
+
+        const getCurrentDay = () => {
+            let weekday = new Array(7);
+            weekday[0] = "Sunday";
+            weekday[1] = "Monday";
+            weekday[2] = "Tuesday";
+            weekday[3] = "Wednesday";
+            weekday[4] = "Thursday";
+            weekday[5] = "Saturday";
+
+            let currentTime = new Date();
+            let day = weekday[currentTime.getDay()];
+
+            return day;
+        };
+
+        let date = document.getElementById("day")
+        date.innerHTML = getCurrentDay()
+
+        const getCurrentTime = () => {
+            var months = [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ];
+
+            var now = new Date();
+            var hours = now.getHours();
+            var mins = now.getMinutes();
+
+            var month = now.getMonth() + 1;
+            var date = now.getDate();
+            // var year = now.getFullYear();
+
+            var period = "am";
+            if (hours > 11) {
+                period = "pm";
+                if (hours > 12) hours -= 12;  // format for 12-hr clock
+            }
+            if (mins < 10) {
+                mins = "0" + mins;   // Format minutes
+            }
+
+            return `${month} /  ${date}  |  ${hours}:${mins}${period}`;
+
+            //curDate.innerHTML = getCurrentDay() + " |" + getCurrentTime();
+
+        }
+
+        let today_date = document.getElementById("today_date")
+        today_date.innerText = getCurrentTime()
+        //getWeatherData("Delhi")
+    </script>
+</body>
+
+</html>
