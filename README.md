@@ -6,6 +6,8 @@
 
 * It also displays current date, time and country from which searched city belongs.
 
-* It is created by using Node.js and Express.js
+* It have dedicated 404 ERROR Page.
 
-* The temperature is accessed by using the Open Weather Map APIcloud ,which provides us with frequently updated weather. It is available for both free as well as paid subscriptions.
+* It is created by using Node.js and Express.js.
+
+* The temperature is accessed by using the Open Weather Map APIcloud ,which provides us with frequently updated weather. It is available for both free as well as paid      subscriptions.
