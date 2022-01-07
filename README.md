@@ -1,6 +1,6 @@
 # Real-time-weather-web-app ☀️ ☁️ ☔ ❄️ 🌁
 
-# Live Demo : https://still-lowlands-68502.herokuapp.com/
+# Live : https://still-lowlands-68502.herokuapp.com/
 
 * This web app displays the live weather of any place you want to know!
 
